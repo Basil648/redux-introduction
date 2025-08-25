@@ -7,14 +7,14 @@ import { decrement, increment, reset } from './redux/CounterSlice'
 
 function App() {
   const dispatch = useDispatch()
-  const count=useSelector((state)=>state.count)
+  const count=useSelector((state)=>state.Counter1.count)
   return (
     <>
       <h1>redux toolkit counter</h1>
-      <h1>count:</h1>
-      <button onClick={()=>dispatch(increment)}>Increment</button>
-      <button onClick={()=>dispatch(decrement)}>Decrement</button>
-      <button onClick={()=>dispatch(reset)}>Reset</button>
+      <h1>count:{count}</h1>
+      <button onClick={()=>dispatch(increment ())}>Increment</button>
+      <button onClick={()=>dispatch(decrement())}>Decrement</button>
+      <button onClick={()=>dispatch(reset())}>Reset</button>
     </>
   )
 
